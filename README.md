@@ -1,54 +1,70 @@
-# Starlight Starter Kit: Basics
+# MTSA Framework Documentation
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+This is the official documentation website for the MTSA framework. Its purpose is to centralize knowledge and serve as an up-to-date reference guide.
 
-```
-npm create astro@latest -- --template starlight
-```
+## 🎯 Objective
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+To maintain clear, comprehensive, and current documentation that serves as the **single source of truth** for using and developing the MTSA framework.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 🚀 Getting Started
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+Any squad member can (and should) clone this project to preview changes or add new content.
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+1.  **Clone the Repository**
+  ```bash
+  # Use the SSH or HTTPS link from the private repository
+  git clone https://github.com/IoTDataAtelier/mtsa-website.git
+  cd mtsa-website
+  ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+2.  **Install Dependencies**
+  This project uses Node.js and npm. Run the following command in the project's root directory:
+  ```bash
+  npm install
+  ```
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+3.  **Run the Development Server**
+  This command launches a local server that automatically reloads the page whenever you save a file. The site will be available at `http://localhost:4321`.
+  ```bash
+  npm run dev
+  ```
 
-Static assets, like favicons, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+## ✍️ How to Contribute
 
-All commands are run from the root of the project, from a terminal:
+This is a living document, and contributions from everyone are essential.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+> [!WARNING]
+> **THE GOLDEN RULE:** Whenever a feature is added, changed, or removed in the `main` branch of the [main MTSA repository](https://github.com/IoTDataAtelier/mtsa), this documentation **MUST** be updated to reflect that change. Keeping the docs in sync is critical.
 
-## 👀 Want to learn more?
+1.  **Create a New Branch**
+  Always start from an up-to-date `main` branch.
+  ```bash
+  git checkout main
+  git pull
+  git checkout -b feature/your-feature-name
+  ```
+  > **Note:** Follow GitFlow best practices when naming branches and writing commit messages.
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+2.  **Add or Edit Content**
+  All documentation content is written in Markdown (`.md`) files located in the `src/content/docs/` directory.
+
+3.  **Commit and Push Your Changes**
+  ```bash
+  git commit -m "docs: Add documentation for feature X"
+  git push -u origin feature/your-feature-name
+  ```
+
+4.  **Open a Pull Request (PR)**
+  On GitHub, open a Pull Request from your branch to `main` so other team members can review your changes.
+
+---
+
+## 🏗️ Tech Stack & Structure
+
+* **Content:** Located in `src/content/docs/`. The folder structure here directly maps to the site's sidebar navigation.
+* **Configuration:** General site settings, such as the title and sidebar structure, are managed in the `astro.config.mjs` file.
+* **Technology:** We use [Astro](https://astro.build/) with the [Starlight](https://starlight.astro.build/) template to build this static site.
