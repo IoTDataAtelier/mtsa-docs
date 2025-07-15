@@ -4,6 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://iotdataatelier.github.io/mtsa-docs',
+  base: '/mtsa-docs/',
   integrations: [
     starlight({
       title: 'MTSA',
